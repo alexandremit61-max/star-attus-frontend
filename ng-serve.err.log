@@ -1,0 +1,14 @@
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: CpfMaskPipe is not used within the template of UserCard[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/users/components/user-card/user-card.ts:10:12:
+[37m      10 │   imports: [[32mCpfMaskPipe[37m, MatButtonModule, MatCardModule, MatIconMo...
+         ╵             [32m~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: CpfMaskPipe is not used within the template of UserCard[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/features/users/components/user-card/user-card.ts:10:12:
+[37m      10 │   imports: [[32mCpfMaskPipe[37m, MatButtonModule, MatCardModule, MatIconMo...
+         ╵             [32m~~~~~~~~~~~[0m
+
+[39m[22m

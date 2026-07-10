@@ -1,0 +1,58 @@
+:host {
+  display: block;
+}
+
+h2 {
+  color: #333333;
+  font-weight: 600;
+}
+
+mat-dialog-content {
+  min-width: min(520px, 82vw);
+  padding-top: 8px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+  padding-top: 8px;
+
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    border-radius: 4px;
+    background: #ffffff;
+  }
+
+  ::ng-deep .mdc-notched-outline__leading,
+  ::ng-deep .mdc-notched-outline__notch,
+  ::ng-deep .mdc-notched-outline__trailing {
+    border-color: #dddddd;
+  }
+
+  ::ng-deep .mdc-text-field--focused .mdc-notched-outline__leading,
+  ::ng-deep .mdc-text-field--focused .mdc-notched-outline__notch,
+  ::ng-deep .mdc-text-field--focused .mdc-notched-outline__trailing {
+    border-color: #757575;
+  }
+}
+
+mat-dialog-actions {
+  gap: 8px;
+  padding: 0 24px 22px;
+
+  button {
+    border-radius: 4px;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.2s ease;
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  mat-dialog-content {
+    min-width: 0;
+  }
+}

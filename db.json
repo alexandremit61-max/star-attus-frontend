@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "name": "Ana Beatriz Silva",
+      "email": "ana.silva@attus.com.br",
+      "cpf": "12345678901",
+      "phone": "85999990001",
+      "phoneType": "Celular",
+      "id": "1"
+    },
+    {
+      "name": "Bruno Carvalho",
+      "email": "bruno.carvalho@attus.com.br",
+      "cpf": "23456789012",
+      "phone": "8533334444",
+      "phoneType": "Comercial",
+      "id": "2"
+    },
+    {
+      "name": "Camila Martins",
+      "email": "camila.martins@attus.com.br",
+      "cpf": "34567890123",
+      "phone": "8544445555",
+      "phoneType": "Residencial",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "name": "Diego Fernandes",
+      "email": "diego.fernandes@attus.com.br",
+      "cpf": "45678901234",
+      "phone": "85988887777",
+      "phoneType": "Celular"
+    },
+    {
+      "name": "Alexandre Rodrigues",
+      "email": "alexandre.rodrigues@attus.com.br",
+      "cpf": "98498498494",
+      "phone": "(85) 98888-5558",
+      "phoneType": "Celular",
+      "id": "c2_115INLY0"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

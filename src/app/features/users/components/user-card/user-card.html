@@ -1,0 +1,17 @@
+<mat-card class="user-card" appearance="outlined">
+  <div class="user-main">
+    <div class="avatar" aria-hidden="true"><mat-icon>person_outline</mat-icon></div>
+    <div class="user-copy">
+      <strong class="user-name">{{ user().name }}</strong>
+      <a class="user-email" [href]="'mailto:' + user().email">{{ user().email }}</a>
+    </div>
+  </div>
+  <div class="user-details" aria-label="Informações do usuário">
+    <span class="detail"><mat-icon>badge</mat-icon><span><small>CPF</small>{{ user().cpf | cpfMask }}</span></span>
+    <span class="detail"><mat-icon>phone</mat-icon><span><small>{{ user().phoneType }}</small>{{ formatPhone(user().phone) }}</span></span>
+  </div>
+  <div class="actions">
+    <button mat-icon-button type="button" aria-label="Editar usuário" (click)="edit.emit(user())"><mat-icon>edit</mat-icon></button>
+    <button class="delete-button" mat-icon-button type="button" aria-label="Excluir usuário" (click)="remove.emit(user())"><mat-icon>delete_outline</mat-icon></button>
+  </div>
+</mat-card>

@@ -1,0 +1,57 @@
+<section class="users-page">
+  <div class="orbit-container">
+    <div class="orbiting-planet"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <strong><span class="brand-mark">A</span>TTUS</strong>
+      <span class="brand-sub">Procuradoria digital</span>
+    </div>
+
+    <mat-form-field class="search-field" appearance="outline">
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput type="search" [formControl]="searchControl" placeholder="Buscar usuários" />
+    </mat-form-field>
+  </header>
+
+  <main class="content">
+    <div class="content-heading">
+      <div>
+        <h1>Usuários</h1>
+        <p>Cadastro e manutenção de usuários da procuradoria <strong>hoje</strong> e no <strong>futuro.</strong></p>
+      </div>
+    </div>
+
+    @if (loading()) {
+      <div class="feedback">
+        <mat-spinner diameter="36"></mat-spinner>
+      </div>
+    }
+
+    @if (error()) {
+      <div class="error-message" role="alert">{{ error() }}</div>
+    }
+
+    <section class="users-grid" aria-label="Lista de usuários">
+      @for (user of users(); track trackByUserId($index, user)) {
+        <app-user-card [user]="user" (edit)="openEditDialog($event)" (remove)="deleteUser($event)" />
+      } @empty {
+        @if (!loading() && !error()) {
+          <div class="empty-state">Nenhum usuário encontrado.</div>
+        }
+      }
+    </section>
+  </main>
+
+  <button
+    class="add-button"
+    mat-fab
+    type="button"
+    color="warn"
+    aria-label="Adicionar usuário"
+    (click)="openCreateDialog()"
+  >
+    <mat-icon>person_add</mat-icon>
+  </button>
+</section>
